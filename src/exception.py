@@ -1,13 +1,5 @@
 import sys 
-import logging
-
-# Configure logging to write to a file
-logging.basicConfig(
-    filename='error.log',  # Name of the log file
-    filemode='a',          # Append mode; use 'w' for overwrite mode
-    format='%(asctime)s - %(levelname)s - %(message)s',  # Log format
-    level=logging.INFO      # Set the logging level
-)
+from src.logger import logging
 
 def error_message_detail(error, error_detail:sys):
     _,_,exc_tb= error_detail.exc_info()
